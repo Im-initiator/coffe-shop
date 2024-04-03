@@ -1,6 +1,8 @@
 # coffe-shop
 
-1 . dowload project bằng git clone + path hoặc dowload file zip
+
+
+1 . dowload project bằng git clone -> git checkout master -> git pull
 
 2 . Mở hệ quản trị csdl MySQL và chạy file sql.sql
 
