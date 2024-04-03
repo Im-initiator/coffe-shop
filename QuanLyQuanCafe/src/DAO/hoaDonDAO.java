@@ -11,11 +11,16 @@ import java.sql.ResultSet;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import jdk.vm.ci.meta.Local;
+import java.time.LocalDateTime;
+
 
 /**
  *
@@ -40,17 +45,29 @@ public class hoaDonDAO {
 
     public static int insert(String mahd, float thanhToan, String manv, float giamGia, String maban) {
         int i = -1;
-        String sql = "set dateformat DMY; insert into hoadon values(?,getdate(),?,?,?,?)";
+        String sql = "insert into hoadon values(?,?,?,?,?,?)";
         try {
+//            LocalDateTime  localDate = LocalDateTime .now();
+//            DateTimeFormatter fomat = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+//            String fomatDate = localDate.format(fomat);
+//            java.sql.Date date = java.sql.Date.valueOf(fomatDate);
+
+            Date currentDate = new Date();
+
+            // Chuyển đổi java.util.Date thành java.sql.Date
+            java.sql.Date date = new java.sql.Date(currentDate.getTime());
             PreparedStatement pre = ConnectDB.getConnection().prepareStatement(sql);
+            
             pre.setString(1, mahd);
-            pre.setFloat(2, thanhToan);
-            pre.setString(3, manv);
-            pre.setFloat(4, giamGia);
-            pre.setString(5, maban);
+            pre.setDate(2,date);
+            pre.setFloat(3, thanhToan);
+            pre.setString(4, manv);
+            pre.setFloat(5, giamGia);
+            pre.setString(6, maban);
             i = pre.executeUpdate();
             pre.close();
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Trùng mã hoá đơn", "Thông báo", 1);
         }
         ConnectDB.close();

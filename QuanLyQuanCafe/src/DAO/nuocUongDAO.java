@@ -30,6 +30,7 @@ public class nuocUongDAO {
                 ds.add(new nuocUong(rs.getString("MANUOCUONG").trim(), rs.getString("TENNUOCUONG").trim(), rs.getString("MALOAINUOC").trim(), rs.getFloat("DONGIA")));
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
         ConnectDB.close();
         return ds;
@@ -100,12 +101,13 @@ public class nuocUongDAO {
 
     public static int xoaNuocUong(String maNuoc)  {
         int i = -1;
-        String sql = "delete nuocuong where manuocuong='" + maNuoc + "'";
+        String sql = "delete nuocuong from nuocuong where manuocuong='" + maNuoc + "'";
 
         try {
             ConnectDB.getConnection();
             i = ConnectDB.executeUpdate(sql);
-        } catch (Exception e) {            
+        } catch (Exception e) {   
+            e.printStackTrace();
         }
         ConnectDB.close();
         return i;

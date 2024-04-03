@@ -22,13 +22,14 @@ public class banDAO {
         ArrayList<ban> ds = new ArrayList<>();
         try {
             ConnectDB.getConnection();
-            String sql = "select * from ban\n"
-                    + "order by Cast(SUBSTRING(RTRIM(maban),2,Len(Rtrim(maban))) as int)";
+            String sql = "SELECT * FROM ban " +
+             "ORDER BY CAST(SUBSTRING(RTRIM(maban), 2, LENGTH(RTRIM(maban))) AS UNSIGNED)";
             ResultSet rs = ConnectDB.executeQuery(sql);
             while (rs.next()) {
                 ds.add(new ban(rs.getString("MABAN").trim(), rs.getString("TENBAN").trim(), Integer.parseInt(rs.getString("TINHTRANG").trim())));
             }
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Loi ban");
         }
         ConnectDB.close();
@@ -83,6 +84,7 @@ public class banDAO {
             ConnectDB.getConnection();
             i = ConnectDB.executeUpdate(sql);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         ConnectDB.close();
         return i;

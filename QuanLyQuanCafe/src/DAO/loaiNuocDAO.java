@@ -33,7 +33,7 @@ public class loaiNuocDAO {
     }
 
     public static int xoaLN(String maLoai) {
-        String sql = "delete loainuoc where maloainuoc='" + maLoai + "'";
+        String sql = "delete loainuoc from loainuoc where maloainuoc='" + maLoai + "'";
         System.out.println(sql);
         int i = -1;
         try {
@@ -53,6 +53,7 @@ public class loaiNuocDAO {
             ConnectDB.getConnection();
             i = ConnectDB.executeUpdate(sql);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         ConnectDB.close();
         return i;
@@ -65,6 +66,7 @@ public class loaiNuocDAO {
             ConnectDB.getConnection();
             i = ConnectDB.executeUpdate(sql);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         ConnectDB.close();
         return i;

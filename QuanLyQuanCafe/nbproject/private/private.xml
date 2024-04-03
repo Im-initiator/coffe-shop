@@ -17,11 +17,20 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Do_An_Java/QuanLyQuanCafe/src/model/hoTro.java</file>
-            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Do_An_Java/QuanLyQuanCafe/src/DAO/ConnectDB.java</file>
-            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Do_An_Java/QuanLyQuanCafe/src/GUI/Login.java</file>
-            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Do_An_Java/QuanLyQuanCafe/src/DAO/nhanVienDAO.java</file>
-            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Do_An_Java/QuanLyQuanCafe/src/DAO/quanTriADO.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/ThemNuoc.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/DAO/banDAO.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/thanhtoan.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/DAO/nuocUongDAO.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/quanLyDoanhThu.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/quanLyCTKMKH.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/quanly.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/nhanVien.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/QLHD.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/model/hoTro.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/DAO/hoaDonDAO.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/QLNV.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/quanlynhapkho.java</file>
+            <file>file:/D:/student/Ki%206/JAVA/btl/demo/Coffe-shop/QuanLyQuanCafe/src/GUI/nhapkho.java</file>
         </group>
     </open-files>
 </project-private>

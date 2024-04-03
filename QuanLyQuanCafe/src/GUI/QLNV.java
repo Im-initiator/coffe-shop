@@ -209,6 +209,11 @@ public class QLNV extends javax.swing.JFrame {
 
         txtNgaySinh.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtNgaySinh.setName("Ngày sinh "); // NOI18N
+        txtNgaySinh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNgaySinhActionPerformed(evt);
+            }
+        });
 
         txtDienThoai.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtDienThoai.setName("Số diện thoại"); // NOI18N
@@ -218,7 +223,6 @@ public class QLNV extends javax.swing.JFrame {
             }
         });
 
-        btnThem.setBackground(new java.awt.Color(255, 255, 255));
         btnThem.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add.png"))); // NOI18N
         btnThem.setText("Thêm");
@@ -229,7 +233,6 @@ public class QLNV extends javax.swing.JFrame {
             }
         });
 
-        btnLamMoi.setBackground(new java.awt.Color(255, 255, 255));
         btnLamMoi.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/refresh.png"))); // NOI18N
         btnLamMoi.setText("Làm mới");
@@ -240,7 +243,6 @@ public class QLNV extends javax.swing.JFrame {
             }
         });
 
-        btnSua.setBackground(new java.awt.Color(255, 255, 255));
         btnSua.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnSua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hammer.png"))); // NOI18N
         btnSua.setText("Sửa");
@@ -251,7 +253,6 @@ public class QLNV extends javax.swing.JFrame {
             }
         });
 
-        btnXoa.setBackground(new java.awt.Color(255, 255, 255));
         btnXoa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
         btnXoa.setText("Xoá");
@@ -262,7 +263,6 @@ public class QLNV extends javax.swing.JFrame {
             }
         });
 
-        btnDong.setBackground(new java.awt.Color(255, 255, 255));
         btnDong.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnDong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnDong.setText("Đóng");
@@ -306,7 +306,6 @@ public class QLNV extends javax.swing.JFrame {
         txtDiaChi.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         txtDiaChi.setName("Địa chỉ"); // NOI18N
 
-        btnReset.setBackground(new java.awt.Color(255, 255, 255));
         btnReset.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/refresh.png"))); // NOI18N
         btnReset.setText("Reset");
@@ -433,7 +432,7 @@ public class QLNV extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel13)
                         .addComponent(txtLuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
                     .addComponent(btnLamMoi)
@@ -677,6 +676,10 @@ public class QLNV extends javax.swing.JFrame {
         hoTro.offEdittingTable(jTable1);
 
     }//GEN-LAST:event_jTable1KeyReleased
+
+    private void txtNgaySinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNgaySinhActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNgaySinhActionPerformed
 
   
     /**

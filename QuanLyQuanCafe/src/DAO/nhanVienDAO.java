@@ -15,6 +15,7 @@ import java.util.Locale;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
 
+
 /**
  *
  * @author Duong Duy
@@ -88,6 +89,7 @@ public class nhanVienDAO {
             ConnectDB.getConnection();
             i = ConnectDB.executeUpdate(sql);
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Lỗi");
         }
         ConnectDB.close();
@@ -96,8 +98,15 @@ public class nhanVienDAO {
 
     public static int themNV(String manv, String matKhau, String hoTen, String gioiTinh, String diaChi, String namSinh, String ngayVL, String sdt, float luong) {
         int i = -1;
-        String sql = "set dateFormat DMY;insert into nhanvien values(?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into nhanvien values(?,?,?,?,?,?,?,?,?)";
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        
         try {
+            Date s = format.parse(namSinh);
+            Date s1 = format.parse(ngayVL);
+            java.sql.Date ngaysinh = new java.sql.Date(s.getTime());
+            java.sql.Date ngaylam = new java.sql.Date(s1.getTime());
+            
             ConnectDB.getConnection();
             PreparedStatement pre = ConnectDB.con.prepareStatement(sql);
             pre.setString(1,manv);
@@ -105,12 +114,13 @@ public class nhanVienDAO {
             pre.setString(3,hoTen);
             pre.setString(4,gioiTinh);
             pre.setString(5,diaChi);
-            pre.setString(6,namSinh);
-            pre.setString(7,ngayVL);
+            pre.setDate(6,ngaysinh);
+            pre.setDate(7,ngaylam);
             pre.setString(8,sdt);
             pre.setFloat(9,luong);
             i=pre.executeUpdate();
         } catch (Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Lỗi","Thông báo",1);
         }
         ConnectDB.close();
